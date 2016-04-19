@@ -1,3 +1,4 @@
 name: George Nguyen
 markdown: kramdown
+highlighter: pygments # or rouge or null
 permalink: /blog/:year/:month/:day/:title
