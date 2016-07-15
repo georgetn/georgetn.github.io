@@ -1,4 +1,11 @@
+url: "http://localhost:4000"
+
+title: George Nguyen
+email:
+description: George Nguyen is a design and data driven product developer who is currently fascinated by blockchain technology.
+
 name: George Nguyen
+
 markdown: kramdown
-highlighter: pygments # or rouge or null
+highlighter: rouge
 permalink: /blog/:year/:month/:day/:title

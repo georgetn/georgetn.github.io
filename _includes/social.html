@@ -1,0 +1,23 @@
+<!--ToDo
+STATUS: NOT FINISHED!!!
+1. Find an alternative method to have a vertical social sharing bar (i.e. sumome, AddToAny - https://www.addtoany.com/buttons/faq/)
+
+OR
+
+1. Find share urls for social channels and link in href
+2. Style ul class as vertical listed icons with individually branded colors
+3. Style div class as a container that  fixes itself to the left or right side of a window viewport. Fixes with scroll effect.
+4. Add this as a liquid markup to the post layout
+5. Functionality and cross-browser testing
+6. Write a post on how to add this to any page, specifically targeting Jekyll users and custom front-end designers
+7. Add source to codepen
+-->
+<div class="share">
+	<ul class="social-icons vertical">
+		<li><a href="http://twitter.com/share?url={{ site.url }}{{ page.url }}&text={{ page.title }}:&via=george_tweets" target="_blank" title="Share this article on Twitter"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>
+		<li><a href="https://www.linkedin.com/in/share?url={{ site.url }}{{ page.url}}&text={{ page.title }}: &via=nguyengeorge" target="_blank" title="Share this article on LinkedIn"><svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></a></li>
+		<li><a href="insert social share link" target="_blank" title="Share this article on Facebook"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a></li>
+		<li><a href="insert" target="_blank" title="Share this article on Reddit"><svg class="icon icon-reddit"><use xlink:href="#icon-reddit"></use></svg></a></li>
+		<li><a href="mailto:?subject=Check out this great article! &amp;body=" title="Share this article"><svg class="icon icon-email"><use xlink:href="#icon-email"></use></svg></a></li>
+	</ul>
+</footer>
