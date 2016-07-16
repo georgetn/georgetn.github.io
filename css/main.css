@@ -477,3 +477,11 @@ body {
   width: 120px;
 }
 */
+
+/* Consulting page*/
+#geo {
+	width: auto;
+	height: auto;
+	background-image:url('../images/geo-r1.jpg');
+	background-size: contain;
+}
