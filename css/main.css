@@ -27,19 +27,98 @@ body {
 	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 	line-height: 1;
 }
-.container {
+/*home*/
+.home_container {
 	text-align: center;
 	padding-top: 5.5rem;
 	margin: auto;
 }
-.container p {
+.home_container p {
 	font-size: 20px;
 }
+/* Under construction page*/
+.construction_bg {
+	background: #ffcc00;
+	width: 100%;
+	height: 100vh;
+}
+.construction_bg > .container {
+	padding-top: 10rem;
+}
+.construction-text h1 {
+	color:black;
+	font-weight: 200;
+	line-height: 1.05;
+}
+.construction-text h2 {
+	color:black;
+	font-weight: 200;
+	line-height: 1.05;
+}
+/* Blog page */
+.blog_bg {
+	background: #ff6600;
+	width: 100%;
+}
+.white-text h1 {
+	color: white;
+}
+
+.blog_list a{
+	font-size: 3rem;
+	display: block;
+	width: 100%;
+}
+.blog_list a:hover{
+	background: #ff6600;
+	color: white;
+	font-size: 4rem;
+	font-weight: 900;
+}
+
+/* Consulting page*/
+.bg {
+	background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url('../images/consulting/geo-r1.jpg') no-repeat top left;
+	width: 100%;
+	height: 100vh;
+}
+.bg > .container {
+	padding-top: 10rem;
+}
+.consulting-text h1 {
+	color:white;
+	font-weight: 200;
+	line-height: 1.05;
+}
+.consulting-text h2 {
+	color:white;
+	font-weight: 200;
+	line-height: 1.05;
+}
+
+/*Body*/
+.body-content > .container {
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
 /*Footer*/
+.footer-content >.container {
+	padding-top: 20px;
+}
+.shade {
+	background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) );
+}
+.shade p {
+	color: #FFFFFF;
+}
+.shade a{
+	color: #FFFC00;
+}
 footer {
-	border-top: 1px solid #d5d5d5;
 	font-size: .8em;
 }
+
 footer ul {
 	font-family:'Helvetica', 'Arial', 'Sans-Serif';
 	padding: 0px;
@@ -87,16 +166,15 @@ p {
 	margin-top: 0;
 }
 
-
 a {
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-a:hover {
+/*a:hover {
   color: #FE7880;
-}
-
+}*/
+/* a styling missing */
 .right-align {
   text-align: right;
 }
@@ -176,7 +254,7 @@ a:hover {
 .menu-icons a:hover:after, .menu-icons a:focus:after, .menu-icons a:active:after {
 	width: 100%;
 }
-.social-icons {
+.social-iconsHome {
 	padding-top: 2.25rem;
 }
 /*Social Icon Pulse Effect*/
@@ -215,7 +293,7 @@ a:hover {
 	-webkit-animation-direction: alternate;
 	animation-direction: alternate;
 }
-/*nav - responsive menu full screen overlay
+/*NAV - responsive menu full screen overlay
 @import url(http://fonts.googleapis.com/css?family=Vollkorn|Roboto);
 body {
   background: #F5F5F5;
@@ -360,7 +438,7 @@ body {
 	width: 50px;
 	height: 50px;
 }
-/* original - no hover effect
+/* base settings for icons
 .icon-twitter {
 	fill: #55acee;
 .icon-dribbble {
@@ -394,7 +472,7 @@ body {
 	fill: #00c300;
 }
 */
-/* social icons, icon colors no hover */
+/*settings for home page icons - menu and social */
 .menu-icons .icon-books {
 	fill: #0099cc; /*#87421F brown / #ffcc00 yellow*/
 }
@@ -410,28 +488,28 @@ body {
 .menu-icons .icon-email {
 	fill: #e50914;
 }
-.social-icons .icon-twitter {
+.social-iconsHome .icon-twitter {
 	fill: #55acee;
 }
-.social-icons .icon-dribbble {
+.social-iconsHome .icon-dribbble {
 	fill: #ea4c89;
 }
-.social-icons .icon-codepen {
+.social-iconsHome .icon-codepen {
 	fill: #666666;
 }
-.social-icons .icon-github {
+.social-iconsHome .icon-github {
 	fill: #999999;
 }
-.social-icons .icon-vimeo {
+.social-iconsHome .icon-vimeo {
 	fill: #162221;
 }
-.social-icons .icon-linkedin {
+.social-iconsHome .icon-linkedin {
 	fill: #0077b5;
 }
-.social-icons .icon-behance {
+.social-iconsHome .icon-behance {
 	fill: #1769ff;
 }
-/* setting circle or bevel around icons - not working
+/* setting circle or bevel around icons
 .icon-github, .icon-twitter, .icon-linkedin, .icon-codepen, .icon-dribbble, .icon-behance {
 	border-radius: 25%;
 	border: 0.01rem solid#000000 10px;
@@ -440,48 +518,99 @@ body {
 
 /* color change hover functionality in effect */
 /*
-.social-icons .icon-twitter:hover {
-  fill: #55acee;
+.menu-icons .icon-books:hover; {
+	fill: #0099cc; /*#87421F brown / #ffcc00 yellow
 }
-.social-icons .icon-dribbble:hover {
-  fill: #ea4c89;
+.menu-icons .icon-sketches:hover {
+	fill: #631d76;
 }
-.social-icons .icon-blog:hover {
-  fill: #ff6600;
+.menu-icons .icon-blog:hover {
+	fill: #ff6600;
 }
-.social-icons .icon-sketches:hover {
-  fill: #631d76;
-}
-.social-icons .icon-codepen:hover {
-  fill: #666666;
-}
-.social-icons .icon-github:hover {
-  fill: #999999;
-}
-.social-icons .icon-vimeo:hover {
-  fill: #162221;
-}
-.social-icons .icon-linkedin:hover {
-  fill: #0077b5;
-}
-.social-icons .icon-email:hover {
-  fill: #e50914;
-}
-.social-icons .icon-behance:hover {
-	fill: #1769ff;
-}
-.social-icons .icon-lab:hover {
+.menu-icons .icon-lab:hover {
 	fill: #00c300;
 }
-.social-icons li a .tooltip {
+.menu-icons .icon-email:hover {
+	fill: #e50914;
+}
+.social-iconsHome .icon-twitter:hover {
+  fill: #55acee;
+}
+.social-iconsHome .icon-dribbble:hover {
+  fill: #ea4c89;
+}
+.social-iconsHome .icon-codepen:hover {
+  fill: #666666;
+}
+.social-iconsHome .icon-github:hover {
+  fill: #999999;
+}
+.social-iconsHome .icon-vimeo:hover {
+  fill: #162221;
+}
+.social-iconsHome .icon-linkedin:hover {
+  fill: #0077b5;
+}
+.social-iconsHome .icon-behance:hover {
+	fill: #1769ff;
+}
+.social-iconsHome li a .tooltip {
   width: 120px;
 }
 */
 
-/* Consulting page*/
-#geo {
-	width: auto;
-	height: auto;
-	background-image:url('../images/geo-r1.jpg');
+
+/*using fixed shrinks image to original size. other elements doesn't fix. how do i  fix?
+
+.bg {
+	position: absolute;
+	background: cover;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}*/
+/*does this work?
+.img {
 	background-size: contain;
+	background-repeat: no-repeat;
+}
+.img-consulting-bg {
+	background-image: url('..images/consulting/geo-r1.jpg');
+	width: 100%;
+	height: auto;
+}*/
+
+/*image banner for posts*/
+.cover-banner {
+	width: 100%;
+	height: 100vh;
+	max-height: 1067px;
+
+	position: relative;
+	top: -294px;
+	margin: 0 auto;
+	padding: 0;
+	overflow: visible;
+
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center;
+	background-size: cover;
+}
+
+/*image banner for pages*/
+.page-banner {
+	width: 100%;
+	height: 100vh;
+	max-height: 1067px;
+
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	overflow: visible;
+
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: left;
+
 }

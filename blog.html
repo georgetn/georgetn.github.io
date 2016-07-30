@@ -1,0 +1,39 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+<!--
+<div class="construction_bg" >
+	<div class="container">
+		<div class="row">
+			<div class="col-12 center">
+				<div class="construction-text">
+					<h1>Whoops!</h1>
+					<h2>Yep, still under construction.</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+-->
+<div class="blog_bg" >
+	<div class="container">
+	<div class="row">
+		<div class="col-12 center">
+			<div class="white-text">
+				<h1>{{ page.title }}</h1>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+<main role="main">
+	<div class="blog_list">
+	{% for post in site.posts %}
+		<div class="row center">
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</div>
+	{% endfor %}
+	</div>
+</main>
