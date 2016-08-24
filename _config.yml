@@ -1,0 +1,19 @@
+# local development settings
+baseurl: "http://localhost:3000"
+permalink: none
+
+# live production settings
+#baseurl: "https://georgetn.com"
+#permalink: /blog/:title
+
+title: George Nguyen
+email:
+description: George Nguyen is a design and data driven product developer who is currently fascinated by blockchain technology.
+
+name: George Nguyen
+
+markdown: kramdown
+highlighter: rouge
+
+# exclude npm related files
+exclude: [']package.json', 'node_modules']
