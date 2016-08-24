@@ -1,10 +1,10 @@
 # local development settings
-baseurl: "http://localhost:3000"
-permalink: none
+#baseurl: "http://localhost:3000"
+#permalink: none
 
 # live production settings
-#baseurl: "https://georgetn.com"
-#permalink: /blog/:title
+baseurl: "https://georgetn.com"
+permalink: /blog/:title
 
 title: George Nguyen
 email:
