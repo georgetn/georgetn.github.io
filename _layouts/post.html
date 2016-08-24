@@ -5,7 +5,15 @@ layout: default
 	<div class="row">
 		<div class="col-12 center post">
 			<h1>{{ page.title }}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col -12 center date"><!--style date to be significantly smaller than headline-->
 			<p class="meta">{{ page.date | date_to_string }}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 content">
 			{{ content }}
 		</div>
 	</div>
