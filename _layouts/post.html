@@ -1,79 +1,20 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta name="description" content="{{ site.description }}">
-		<meta charset="UTF-8">
-		<title> {% if page.title %} {{ page.title }} | {% endif %} {{ site.title }}</title>
-
-		<!-- MOBILE SETTINGS -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="white" />
-
-		<!-- link to the main stylesheet -->
-		<link rel="stylesheet" href="/css/normalize.css">
-		<link rel="stylesheet" href="/css/simple-grid.min.css">
-		<link rel="stylesheet" href="/css/main.css">
-
-		<!-- favicon -->
-		<link rel="shortcut icon" href="{{ site.url }}/images/favicon.ico" type="image/x-icon" />
-
-		<!-- Google Authorship
-		<link rel="author" href="insert your google profile URL here" />
-		-->
-
-		<!-- Analytics-->
-		{% include analytics.html %}
-
-		<!--Scripts-->
-		<script src="../js/vendor/jquery-2.1.3.min.js"></script>
-
-	</head>
-	<body>
-		<!--Menu section-->
-		<div class="button_container" id="toggle">
-		  <span class="top"></span>
-		  <span class="middle"></span>
-		  <span class="bottom"></span>
+---
+layout: default
+---
+<div class="container">
+	<div class="row">
+		<div class="col-12 center post-title">
+			<h1>{{ page.title }}</h1>
 		</div>
-
-		<div class="overlay" id="overlay">
-		  <nav class="overlay-menu">
-		    <ul>
-		      <li ><a href="/">Home</a></li>
-		      <li><a href="/blog">Blog</a></li>
-		      <li><a href="/portfolio">Portfolio</a></li>
-		      <li><a href="/consulting" >Consulting</a></li>
-		      <li><a href="mailto:contact@georgetn.com?subject=Hello!&amp;body=Hi George, I checked out your portfolio and...">Contact</a></li>
-		    </ul>
-		  </nav>
+	</div>
+	<div class="row">
+		<div class="col-12 center date"><!--style date to be significantly smaller than headline-->
+			<p class="post-meta">{{ page.date | date_to_string }}</p>
 		</div>
-
-		{% include svg-icons.html %}
-
-		<section>
-			<div class="container">
-				<div class="row">
-					<div class="col-12 center post">
-						<h1>{{ page.title }}</h1>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-12 center date"><!--style date to be significantly smaller than headline-->
-						<p class="meta">{{ page.date | date_to_string }}</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-12 content">
-						{{ content }}
-					</div>
-				</div>
-			</div>
-		</section>
-	{% include footer-page.html %}
-	</body>
-		<!--Moar scripts-->
-		<script src="../js/scripts.js"></script>
-		<script src="../js/vendor/wow.min.js"></script>
-</html>
-
+	</div>
+	<div class="row">
+		<div class="col-12 post-content">
+			{{ content }}
+		</div>
+	</div>
+</div>
