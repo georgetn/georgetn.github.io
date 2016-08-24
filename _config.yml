@@ -12,4 +12,3 @@ permalink: /blog/post/:title
 
 # exclude npm related files
 exclude: [']package.json', 'node_modules']
-
