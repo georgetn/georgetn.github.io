@@ -78,14 +78,17 @@ body {
 
 /* Consulting page*/
 .bg {
-	background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url('../images/consulting/geo-r1.jpg') no-repeat top left;
-	width: 100%;
-	height: 100vh;
+	background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url('../images/consulting/geo-r1.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size:  cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .bg > .container {
 	padding-top: 10rem;
 }
 .consulting-text h1 {
+
 	color:white;
 	font-weight: 200;
 	line-height: 1.05;
