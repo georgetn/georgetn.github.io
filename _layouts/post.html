@@ -1,20 +1,22 @@
 ---
 layout: default
 ---
-<div class="container">
+<article class="container">
 	<div class="row">
-		<div class="col-12 center post-title">
-			<h1>{{ page.title }}</h1>
+		<div class="col-12">
+			<h1 class="center post-title">{{ page.title }}</h1>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-12 center date"><!--style date to be significantly smaller than headline-->
-			<p class="post-meta">{{ page.date | date_to_string }}</p>
+		<div class="col-12"><!--style date to be significantly smaller than headline-->
+			<p class="center post-meta post-date">{{ page.date | date_to_string }}</p>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-12 post-content">
+	<div class="row post-content">
+		<div class="col-2 hidden-sm"></div>
+		<div class="col-8">
 			{{ content }}
 		</div>
+		<div class="col-2 hidden-sm"></div>
 	</div>
-</div>
+</article>

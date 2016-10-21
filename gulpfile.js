@@ -1,7 +1,11 @@
+// Include gulp
 var gulp = require('gulp');
 	browserSync = require('browser-sync').create();
 	reload = browserSync.reload;
+// Include plugins
 var cp = require('child_process');
+
+// Include messages
 var messages = {
 	jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
@@ -9,7 +13,7 @@ var messages = {
 //Build Jekyll Site
 gulp.task('jekyll-build', function (done) {
 	browserSync.notify(messages.jekyllBuild);
-	return cp.spawn('jekyll.bat', ['build'])
+	return cp.spawn('jekyll', ['build'])
 		.on('close', done);
 });
 

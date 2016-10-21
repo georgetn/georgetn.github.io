@@ -11,22 +11,42 @@ html {
 	box-sizing: inherit;
 }
 
-/* Global */
-html,
-body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	left: 0;
-	top: 0;
-	border: 0;
-	vertical-align: baseline;
-
-	position: absolute;
-	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-	line-height: 1;
+img, embed, object, video {
+  max-width: 100%;
+  border: none;
 }
+
+/* Body*/
+body {
+	min-height:  100%;
+	position: relative;
+	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+.body-content > .container {
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+/*Footer*/
+.footer-content >.container {
+	padding-top: 20px;
+}
+
+footer {
+	position:  relative;
+	bottom:  0;
+	width: 100%;
+	font-size: .8em;
+}
+
+footer ul {
+	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	padding: 0px;
+	list-style: none;
+	font-weight: bold;
+}
+
 /*home*/
 .home_container {
 	text-align: center;
@@ -78,11 +98,13 @@ body {
 
 /* Consulting page*/
 .bg {
-	background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url('../images/consulting/geo-r1.jpg') no-repeat center center;
-	-webkit-background-size: cover;
+	background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url('../images/consulting/geo-r1.jpg') no-repeat ;
+	width:  100%;
+	height:  760px;
+	/*-webkit-background-size: cover;
 	-moz-background-size:  cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover;*/
 }
 .bg > .container {
 	padding-top: 10rem;
@@ -98,51 +120,93 @@ body {
 	font-weight: 200;
 	line-height: 1.05;
 }
+/*Post styles*/
 
-/*Body*/
-.body-content > .container {
-  position: relative;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-/*Footer*/
-.footer-content >.container {
-	padding-top: 20px;
-}
-.shade {
-	background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) );
-}
-.shade p {
-	color: #FFFFFF;
-}
-.shade a{
-	color: #FFFC00;
-}
-footer {
-	font-size: .8em;
+/* colours for blog post covers */
+.yellow {
+  background: #eea900;
 }
 
-footer ul {
-	font-family:'Helvetica', 'Arial', 'Sans-Serif';
-	padding: 0px;
-	list-style: none;
-	font-weight: bold;
+.green {
+  background: #4e9a81;
 }
+
+.blue {
+  background: #4871d1;
+}
+
+.light_blue {
+  background: #41b3e8;
+}
+
+.red {
+  background: #de352c;
+}
+
+.pink {
+  background: #f89058;
+}
+
+.orange {
+  background: #c96b00;
+}
+
+.brown {
+  background: #90782b;
+}
+
+.mauve {
+  background: #4d57a3;
+}
+
+.light_mauve {
+  background: #927ecc;
+}
+
+.black {
+  background: #444;
+}
+
+.grey {
+  background: #888c8d;
+}
+
+.white {
+  background: #bbb;
+}
+
+.post-title {
+	font-size: 2.75rem;
+	font-weight: 200;
+	line-height: 1.5;
+}
+.post-date {
+	font-size: 1rem;
+	font-weight: 100;
+	line-height: 1;
+	padding-bottom: 5rem;
+}
+.post-content {
+	font-size: 1.5rem;
+	font-weight: 200;
+	line-height: 1;
+}
+
 /* Typography */
 h1 {
-	font-size: 5rem;
+	font-size: 3.25rem;
 	font-weight: 600;
 	line-height: 0.75;
 }
 
 h2 {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-weight: 500;
 	line-height: 1;
 }
 
 h3 {
-	font-size: 2.75rem;
+	font-size: 2rem;
 	font-weight: 200;
 	margin-top: 0;
 }
@@ -161,8 +225,9 @@ h6 {
 	transition: all 0.25s ease;
 }
 
+/* If not used on any page. Remove. */
 p {
-	font-size: 2.25rem;
+	font-size: 1.5rem;
 	font-weight: 200;
 	line-height: 1.5;
 	letter-spacing: 0.01rem;
@@ -562,27 +627,6 @@ body {
 }
 */
 
-
-/*using fixed shrinks image to original size. other elements doesn't fix. how do i  fix?
-
-.bg {
-	position: absolute;
-	background: cover;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-}*/
-/*does this work?
-.img {
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-.img-consulting-bg {
-	background-image: url('..images/consulting/geo-r1.jpg');
-	width: 100%;
-	height: auto;
-}*/
-
 /*image banner for posts*/
 .cover-banner {
 	width: 100%;
@@ -615,5 +659,30 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: left;
+
+}
+/*shading - consider removing this block of styling*/
+.shade {
+	background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) );
+}
+.shade p {
+	color: #FFFFFF;
+}
+.shade a{
+	color: #FFFC00;
+}
+
+/* === MEDIA QUERIES === */
+@media screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 720px) {
+  .bg {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 320px) {
 
 }
