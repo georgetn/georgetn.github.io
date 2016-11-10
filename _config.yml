@@ -1,9 +1,9 @@
 # local development settings
-#baseurl: "http://localhost:3000"
+baseurl: "http://localhost:3000"
 permalink: none
 
 # live production settings
-baseurl: "https://georgetn.com"
+#baseurl: "https://georgetn.com"
 #permalink: /blog/:title
 
 title: George Nguyen
