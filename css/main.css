@@ -671,6 +671,13 @@ body {
 .shade a{
 	color: #FFFC00;
 }
+/*additional styling*/
+.line {
+  height: 1px;
+  width: 100%;
+  background: #D6D6D8;
+  margin: 80px 0;
+}
 
 /* === MEDIA QUERIES === */
 @media screen and (max-width: 1200px) {
