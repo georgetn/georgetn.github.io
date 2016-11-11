@@ -81,19 +81,19 @@ footer ul {
 	width: 100%;
 }
 .white-text h1 {
-	color: white;
+	color: #FFF;
 }
 
 .blog_list a{
-	font-size: 3rem;
+	font-size: 1.75em;
 	display: block;
 	width: 100%;
 }
 .blog_list a:hover{
-	background: #ff6600;
-	color: white;
-	font-size: 4rem;
-	font-weight: 900;
+	background: #62a4d1;
+	font-color: #FFFFFF;
+	font-size: 2em;
+	font-weight: 400;
 }
 
 /* Consulting page*/
@@ -235,8 +235,13 @@ p {
 }
 
 a {
-  text-decoration: none;
-  transition: all 0.3s ease;
+	color: #62a4d1;
+	text-decoration: none;
+	position: relative;
+	text-decoration: none;
+	font-size: 1em;
+	overflow: hidden;
+	transition: all 0.3s ease;
 }
 
 /*a:hover {
@@ -272,18 +277,16 @@ a {
 	margin-right: auto;
 
 }
-
-.blurb a {
-	display: inline-block;
+/*underlines <a> tag*/
+.underline a {
 	position: relative;
 	text-align: center;
 	color: #62a4d1;
 	text-decoration: none;
 	font-size: 20px;
 	overflow: hidden;
-	top: 5px;
 }
-.blurb a:after {
+.underline a:after {
 	content: '';
 	position: absolute;
 	background: #62a4d1;
@@ -294,7 +297,7 @@ a {
 	bottom: 0;
 	transition: .35s ease;
 }
-.blurb a:hover:after, .blurb a:focus:after, .blurb a:active:after {
+.underline a:hover:after, .underline a:focus:after, .underline a:active:after {
 		width: 100%;
 }
 
@@ -672,12 +675,20 @@ body {
 	color: #FFFC00;
 }
 /*additional styling*/
-.line {
+.line-primary {
   height: 1px;
   width: 100%;
   background: #D6D6D8;
-  margin: 80px 0;
+  margin: 60px 0;
 }
+
+.line-secondary {
+  height: 1px;
+  width: 100%;
+  background: #D6D6D8;
+  margin: 20px 0;
+}
+
 
 /* === MEDIA QUERIES === */
 @media screen and (max-width: 1200px) {
