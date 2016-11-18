@@ -264,7 +264,6 @@ a {
   font-weight: 500;
 }
 
-
 /*image styling*/
 .img-circle {
 	border-radius: 50%;
@@ -688,7 +687,20 @@ body {
   background: #D6D6D8;
   margin: 20px 0;
 }
-
+/* Avatar styling - about/home page */
+.avatar {
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+/* Images */
+.img-profile {
+	background-image: url('../images/home/geo-profile.jpg');
+	background-position: top center;
+}
 
 /* === MEDIA QUERIES === */
 @media screen and (max-width: 1200px) {
