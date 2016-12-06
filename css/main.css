@@ -46,6 +46,104 @@ footer ul {
 	list-style: none;
 	font-weight: bold;
 }
+/*shading - consider removing this block of styling*/
+.dark-shade {
+	background: rgba(0,0,0, 0.75);
+	height: inherit;
+}
+
+.lite-shade {
+	background: rgba(0,0,0, 0.02);
+	height: inherit;
+}
+
+.cta {
+	padding-top: 8rem;
+}
+
+/* Buttons */
+.btn {
+	display: inline-block;
+	padding: 1rem 3.5rem;
+	margin-bottom: 0;
+	text-align: center;
+	cursor: pointer;
+	/*touch-action: manipulation;*/
+	background: transparent;
+	border: 3px solid transparent;
+	border-radius: 4px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+.btn-large {
+	display: inline-block;
+	padding: 2.25rem 2.25rem;
+	margin-bottom: 0;
+	text-align: center;
+	cursor: pointer;
+	/*touch-action: manipulation;*/
+	background: transparent;
+	border: 3px solid transparent;
+	border-radius: 10px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+.btn-primary {
+	color: #FFFFFF;
+	border-color: #FFFFFF;
+	font-size: 2rem;
+	font-weight: 350;
+}
+
+.btn-primary:hover {
+	color: #FFFFFF;
+	background: #62a4d1;
+	border-color: #62a4d1;
+}
+
+.btn-secondary {
+	color: #4AC948;
+	border-color: #4AC948;
+	font-size: 2.65rem;
+	font-weight: 700;
+}
+
+.btn-secondary:hover {
+	color: #FFFFFF;
+	background: #4AC948;
+	border-color: #4AC948;
+}
+
+.btn-tweet {
+	color:#1DA1F2;
+	border-color:#1DA1F2;
+	font-size: 2.65rem;
+	font-weight: 700;
+}
+
+.btn-tweet:hover {
+	color:#FFFFFF;
+	background:#1DA1F2;
+	border-color:#1DA1F2;
+}
+
+/*text color classes*/
+.white-text h1{
+	color: #FFFFFF;
+}
+.white-text h2{
+	color: #FFFFFF;
+}
+
+.white-text h3{
+	color: #FFFFFF;
+}
+
+.white-text p{
+	color: #FFFFFF;
+}
 
 /*home*/
 .home_container {
@@ -53,9 +151,22 @@ footer ul {
 	padding-top: 5.5rem;
 	margin: auto;
 }
+@media only screen and (max-width: 640px) {
+    .home_container h1 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    h2 {
+    	font-size: 24px;
+    }
+}
+
 .home_container p {
 	font-size: 20px;
 }
+
 /* Under construction page*/
 .construction_bg {
 	background: #ffcc00;
@@ -80,9 +191,6 @@ footer ul {
 	background: #ff6600;
 	width: 100%;
 }
-.white-text h1 {
-	color: #FFF;
-}
 
 .blog_list a{
 	font-size: 1.75em;
@@ -96,29 +204,44 @@ footer ul {
 	font-weight: 400;
 }
 
+/*Contact page*/
+.contact-top {
+	padding-top: 5.5rem;
+	margin: auto;
+}
+
+.contact-main {
+	width: 100%;
+	padding-top: 6rem;
+}
+
 /* Consulting page*/
-.bg {
-	background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url('../images/consulting/geo-r1.jpg') no-repeat ;
+
+.bg-top-work {
+	background: url('../images/consulting/desk2.jpg') center no-repeat;
 	width:  100%;
-	height:  760px;
+	height: 760px;
+}
+
+.bg-top-work h1{
+	line-height: 1;
+}
+.bg-mid-geo {
+	background: url('../images/consulting/geo-r1.jpg') top no-repeat;
+	background-size: cover;
+	width:  100%;
+	position: relative;
+	display: block;
 	/*-webkit-background-size: cover;
 	-moz-background-size:  cover;
 	-o-background-size: cover;
 	background-size: cover;*/
 }
-.bg > .container {
-	padding-top: 10rem;
-}
-.consulting-text h1 {
 
-	color:white;
-	font-weight: 200;
-	line-height: 1.05;
-}
-.consulting-text h2 {
-	color:white;
-	font-weight: 200;
-	line-height: 1.05;
+.bottom-cta {
+	background: #228B22;
+	position: relative;
+	display:  block;
 }
 /*Post styles*/
 
@@ -196,7 +319,7 @@ footer ul {
 h1 {
 	font-size: 3.25rem;
 	font-weight: 600;
-	line-height: 0.75;
+	line-height: 0.5;
 }
 
 h2 {
@@ -210,7 +333,15 @@ h3 {
 	font-weight: 200;
 	margin-top: 0;
 }
-
+/*
+.profile #header h3 {
+  font-size: 14px;
+  margin-top: 10px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #808080;
+}
+*/
 h4 {
 	font-size: 1.25rem;
 	font-weight: 100;
@@ -324,8 +455,12 @@ a {
 .menu-icons a:hover:after, .menu-icons a:focus:after, .menu-icons a:active:after {
 	width: 100%;
 }
-.social-iconsHome {
+.pad-top {
 	padding-top: 2.25rem;
+}
+
+.pad-bot {
+	padding-bottom: 2rem;
 }
 /*Social Icon Pulse Effect*/
 @-webkit-keyframes pulse {
@@ -508,14 +643,15 @@ body {
 	width: 50px;
 	height: 50px;
 }
+.icon-large {
+	width: 100px;
+	height: 100px;
+}
 /* base settings for icons
 .icon-twitter {
 	fill: #55acee;
 .icon-dribbble {
   fill: #ea4c89;
-}
-.icon-blog {
-  fill: #ff6600;
 }
 .icon-sketches: {
   fill: #631d76;
@@ -538,45 +674,34 @@ body {
  .icon-behance {
 	fill: #1769ff;
 }
- .icon-lab {
-	fill: #00c300;
-}
 */
-/*settings for home page icons - menu and social */
-.menu-icons .icon-books {
-	fill: #0099cc; /*#87421F brown / #ffcc00 yellow*/
-}
+/*settings for color icons - menu and social */
 .menu-icons .icon-sketches {
 	fill: #631d76;
 }
-.menu-icons .icon-blog {
-	fill: #ff6600;
-}
-.menu-icons .icon-lab {
-	fill: #00c300;
-}
+
 .menu-icons .icon-email {
 	fill: #e50914;
 }
-.social-iconsHome .icon-twitter {
+.social-icons .icon-twitter {
 	fill: #55acee;
 }
-.social-iconsHome .icon-dribbble {
+.social-icons .icon-dribbble {
 	fill: #ea4c89;
 }
-.social-iconsHome .icon-codepen {
+.social-icons .icon-codepen {
 	fill: #666666;
 }
-.social-iconsHome .icon-github {
+.social-icons .icon-github {
 	fill: #999999;
 }
-.social-iconsHome .icon-vimeo {
+.social-icons .icon-vimeo {
 	fill: #162221;
 }
-.social-iconsHome .icon-linkedin {
+.social-icons .icon-linkedin {
 	fill: #0077b5;
 }
-.social-iconsHome .icon-behance {
+.social-icons .icon-behance {
 	fill: #1769ff;
 }
 /* setting circle or bevel around icons
@@ -588,43 +713,34 @@ body {
 
 /* color change hover functionality in effect */
 /*
-.menu-icons .icon-books:hover; {
-	fill: #0099cc; /*#87421F brown / #ffcc00 yellow
-}
 .menu-icons .icon-sketches:hover {
 	fill: #631d76;
-}
-.menu-icons .icon-blog:hover {
-	fill: #ff6600;
-}
-.menu-icons .icon-lab:hover {
-	fill: #00c300;
 }
 .menu-icons .icon-email:hover {
 	fill: #e50914;
 }
-.social-iconsHome .icon-twitter:hover {
+.social-icons .icon-twitter:hover {
   fill: #55acee;
 }
-.social-iconsHome .icon-dribbble:hover {
+.social-icons .icon-dribbble:hover {
   fill: #ea4c89;
 }
-.social-iconsHome .icon-codepen:hover {
+.social-icons .icon-codepen:hover {
   fill: #666666;
 }
-.social-iconsHome .icon-github:hover {
+.social-icons .icon-github:hover {
   fill: #999999;
 }
-.social-iconsHome .icon-vimeo:hover {
+.social-icons .icon-vimeo:hover {
   fill: #162221;
 }
-.social-iconsHome .icon-linkedin:hover {
+.social-icons .icon-linkedin:hover {
   fill: #0077b5;
 }
-.social-iconsHome .icon-behance:hover {
+.social-icons .icon-behance:hover {
 	fill: #1769ff;
 }
-.social-iconsHome li a .tooltip {
+.social-icons li a .tooltip {
   width: 120px;
 }
 */
@@ -663,37 +779,27 @@ body {
 	background-position: left;
 
 }
-/*shading - consider removing this block of styling*/
-.shade {
-	background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) );
-}
-.shade p {
-	color: #FFFFFF;
-}
-.shade a{
-	color: #FFFC00;
-}
+
 /*additional styling*/
 .line-primary {
   height: 1px;
   width: 100%;
   background: #D6D6D8;
-  margin: 60px 0;
+  margin: 10px 0;
 }
 
 .line-secondary {
   height: 1px;
   width: 100%;
   background: #D6D6D8;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 /* Avatar styling - about/home page */
 .avatar {
 	display: inline-block;
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
-	margin-bottom: 20px;
 	overflow: hidden;
 }
 /* Images */

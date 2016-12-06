@@ -18,15 +18,17 @@ permalink: /blog/
 <main role="main">
 	<div class="container blog_list">
 	{% for post in site.posts %}
-		<a href="{{ post.url }}" class="row">
-			<div class="col-9">{{ post.title }}</div>
-			<div class="col-3">{{ post.date | date: '%b %d %Y' }}</div>
-		</a>
-		<div class="row">
-		        	<div class="col-12">
-		         	 <div class="line-secondary"></div>
-		        	</div>
-		</div>
+		{% if post.categories contains 'blog' %}
+			<a href="{{ post.url }}" class="row">
+				<div class="col-9">{{ post.title }}</div>
+				<div class="col-3">{{ post.date | date: '%b %d %Y' }}</div>
+			</a>
+			<div class="row">
+			        	<div class="col-12">
+			         	 <div class="line-secondary"></div>
+			        	</div>
+			</div>
+		{% endif %}
 	{% endfor %}
 	</div>
 </main>

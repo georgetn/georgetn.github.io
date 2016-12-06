@@ -41,21 +41,21 @@
 		  <nav class="overlay-menu">
 		    <ul>
 		      <li ><a href="/">Home</a></li>
-		      <li><a href="/blog">Blog</a></li>
-		      <li><a href="/consulting" >Consulting</a></li>
-		      <li><a href="mailto:contact@georgetn.com">Contact</a></li>
+		      <li><a href="/blog/">Blog</a></li>
+		      <li><a href="/consulting/" >Consulting</a></li>
+		      <li><a href="/contact/">Contact</a></li>
 		    </ul>
 		  </nav>
 		</div>
-
+		<!--Loads SVG-->
 		{% include svg-icons.html %}
 
-		<section>
+        		<!--Loads page content-->
         		{{ content }}
-		</section>
-	{% include footer-social-color.html %}
+
+		<!--Loads footer content-->
+		{% include footer.html %}
 	</body>
 		<!--Moar scripts-->
 		<script src="https://georgetn.github.io/js/scripts.js"></script>
-		<script src="https://georgetn.github.io/js/vendor/wow.min.js"></script>
 </html>
