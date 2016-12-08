@@ -1,6 +1,6 @@
 # local development settings
 #baseurl: "http://localhost:3000"
-#permalink: none
+permalink: none
 
 # live production settings
 baseurl: "https://georgetn.com"
