@@ -1,3 +1,4 @@
+reference: http://nvie.com/posts/a-successful-git-branching-model/
 #What is git?
 #What is branching?
 -concept model
